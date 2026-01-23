@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mail, Twitter } from "lucide-react";
+import { Facebook, Mail, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -34,17 +34,20 @@ export function Footer() {
                     <div className="space-y-4">
                         <h3 className="font-semibold text-foreground">Get in Touch</h3>
                         <div className="flex space-x-4">
-                            <Button variant="outline" size="icon" className="rounded-full border-brand-primary/50 text-brand-primary hover:bg-brand-primary hover:text-white">
-                                <Mail className="h-4 w-4" />
-                                <span className="sr-only">Email</span>
+                            <Button asChild variant="outline" size="icon" className="rounded-full border-brand-primary/50 text-brand-primary hover:bg-brand-primary hover:text-white">
+                                <Link href="mailto:bfacounselling@gmail.com" target="_blank" aria-label="Email">
+                                    <Mail className="h-4 w-4" />
+                                </Link>
                             </Button>
-                            <Button variant="outline" size="icon" className="rounded-full border-brand-primary/50 text-brand-primary hover:bg-brand-primary hover:text-white">
-                                <Linkedin className="h-4 w-4" />
-                                <span className="sr-only">LinkedIn</span>
+                            <Button asChild variant="outline" size="icon" className="rounded-full border-brand-primary/50 text-brand-primary hover:bg-brand-primary hover:text-white">
+                                <Link href="https://wa.me/447508940261" target="_blank" aria-label="WhatsApp">
+                                    <MessageCircle className="h-4 w-4" />
+                                </Link>
                             </Button>
-                            <Button variant="outline" size="icon" className="rounded-full border-brand-primary/50 text-brand-primary hover:bg-brand-primary hover:text-white">
-                                <Twitter className="h-4 w-4" />
-                                <span className="sr-only">Twitter</span>
+                            <Button asChild variant="outline" size="icon" className="rounded-full border-brand-primary/50 text-brand-primary hover:bg-brand-primary hover:text-white">
+                                <Link href="https://www.facebook.com/share/18AuH3j6nM/" target="_blank" aria-label="Facebook">
+                                    <Facebook className="h-4 w-4" />
+                                </Link>
                             </Button>
                         </div>
                         <p className="text-sm text-muted-foreground">

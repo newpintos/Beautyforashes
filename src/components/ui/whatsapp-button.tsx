@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function WhatsAppButton() {
-    const phoneNumber = "1234567890"; // Placeholder number
+    const phoneNumber = "447508940261"; // Updated contact number
     const message = "Hello, I would like to enquire about counselling sessions.";
 
     const handleClick = () => {
