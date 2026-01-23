@@ -48,7 +48,7 @@ export function Footer() {
                             </Button>
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            Based in London, UK.
+                            Based in Dunmurry, UK.
                         </p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export function Footer() {
                         Disclaimer: This website is a portfolio demonstration. It is not a real medical service.
                     </p>
                     <p>
-                        &copy; {new Date().getFullYear()} Beauty for Ashes Portfolio. Built with Next.js & Shadcn/UI.
+                        &copy; {new Date().getFullYear()} Beauty for Ashes. Built by XYZ Digilab.
                     </p>
                 </div>
             </div>
