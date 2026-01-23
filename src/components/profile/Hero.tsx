@@ -1,10 +1,10 @@
 
 export function Hero() {
     return (
-        <section className="relative w-full">
+        <section className="relative w-full overflow-hidden">
             {/* Background Banner */}
             <video
-                className="w-full h-auto"
+                className="w-full h-auto scale-[1.02]"
                 autoPlay
                 loop
                 muted
