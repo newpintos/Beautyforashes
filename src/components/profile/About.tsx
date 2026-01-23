@@ -20,6 +20,9 @@ export function About() {
                             />
                         </div>
 
+                        {/* Mobile Separator */}
+                        <div className="w-full h-3 lg:hidden bg-brand-soft" />
+
                         {/* Content Side */}
                         <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                             <blockquote className="text-xl md:text-2xl font-serif text-brand-primary/80 italic mb-8 leading-relaxed">
