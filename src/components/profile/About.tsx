@@ -7,7 +7,7 @@ export function About() {
             <div className="container max-w-6xl mx-auto px-4">
                 {/* Unified Card Container */}
                 <div className="bg-orange-50/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-stone-100">
-                    <div className="grid lg:grid-cols-[400px_1fr] gap-0">
+                    <div className="grid lg:grid-cols-[45%_55%] gap-0">
 
                         {/* Image Side */}
                         <div className="relative h-[400px] lg:h-auto w-full">
