@@ -1,10 +1,10 @@
 
 export function Hero() {
     return (
-        <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full">
             {/* Background Banner */}
             <video
-                className="absolute inset-0 z-0 w-full h-full object-cover"
+                className="w-full h-auto"
                 autoPlay
                 loop
                 muted

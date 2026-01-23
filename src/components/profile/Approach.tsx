@@ -15,17 +15,32 @@ export function Approach() {
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
-                    <Card className="border-none shadow-md">
-                        <CardContent className="p-6 space-y-4">
-                            <h3 className="text-xl font-semibold text-brand-secondary">Core Principles</h3>
-                            <ul className="space-y-3 text-muted-foreground list-disc list-outside ml-5">
-                                <li><span className="font-medium text-foreground">Confidentiality:</span> A completely private space for effective work.</li>
-                                <li><span className="font-medium text-foreground">Empathy:</span> Seeing the world from your perspective.</li>
-                                <li><span className="font-medium text-foreground">Non-Judgment:</span> Accepting you as you are, without criticism.</li>
-                                <li><span className="font-medium text-foreground">Autonomy:</span> Respecting your right to make your own choices.</li>
-                            </ul>
-                        </CardContent>
-                    </Card>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <Card className="border-none shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur-sm">
+                            <CardContent className="p-4">
+                                <h4 className="font-semibold text-brand-secondary mb-1">Confidentiality</h4>
+                                <p className="text-sm text-muted-foreground">A completely private space for effective work.</p>
+                            </CardContent>
+                        </Card>
+                        <Card className="border-none shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur-sm">
+                            <CardContent className="p-4">
+                                <h4 className="font-semibold text-brand-secondary mb-1">Empathy</h4>
+                                <p className="text-sm text-muted-foreground">Seeing the world from your perspective.</p>
+                            </CardContent>
+                        </Card>
+                        <Card className="border-none shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur-sm">
+                            <CardContent className="p-4">
+                                <h4 className="font-semibold text-brand-secondary mb-1">Non-Judgment</h4>
+                                <p className="text-sm text-muted-foreground">Accepting you as you are, without criticism.</p>
+                            </CardContent>
+                        </Card>
+                        <Card className="border-none shadow-sm hover:shadow-md transition-shadow bg-background/60 backdrop-blur-sm">
+                            <CardContent className="p-4">
+                                <h4 className="font-semibold text-brand-secondary mb-1">Autonomy</h4>
+                                <p className="text-sm text-muted-foreground">Respecting your right to make your own choices.</p>
+                            </CardContent>
+                        </Card>
+                    </div>
 
                     <div className="flex flex-col justify-center space-y-6">
                         <p className="text-lg text-muted-foreground">
