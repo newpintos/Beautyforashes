@@ -5,25 +5,23 @@ export function About() {
     return (
         <section id="about" className="py-20 relative overflow-hidden bg-stone-50/50">
             <div className="container max-w-6xl mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center relative">
+                {/* Unified Card Container */}
+                <div className="bg-orange-50/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-stone-100">
+                    <div className="grid lg:grid-cols-[400px_1fr] gap-0">
 
-                    {/* Image Section */}
-                    <div className="w-full lg:w-1/2 relative z-10">
-                        <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:mx-0 overflow-hidden rounded-lg shadow-xl">
+                        {/* Image Side */}
+                        <div className="relative h-[400px] lg:h-auto w-full">
                             <Image
                                 src="/juli.png"
                                 alt="Julie Crawford - Psychotherapist"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-top"
                                 priority
                             />
                         </div>
-                    </div>
 
-                    {/* Content Card - Overlapping */}
-                    <div className="w-full lg:w-3/5 lg:-ml-24 relative z-20 mt-8 lg:mt-0">
-                        <div className="bg-orange-50/90 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-lg border border-stone-100">
-
+                        {/* Content Side */}
+                        <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                             <blockquote className="text-xl md:text-2xl font-serif text-brand-primary/80 italic mb-8 leading-relaxed">
                                 "I believe healing begins when you feel safe enough to be real."
                             </blockquote>
@@ -49,10 +47,8 @@ export function About() {
                                     Book a free consultation
                                 </Button>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
