@@ -27,17 +27,18 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
-      <div className="container relative flex h-16 max-w-screen-xl items-center justify-center px-4 sm:px-8">
-        {/* Desktop Layout: Centered Group */}
-        <div className="hidden md:flex items-center gap-8">
-          {/* Logo */}
+      <div className="container relative flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-8">
+        {/* Logo - Left */}
+        <div className="hidden md:flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold tracking-tight text-white whitespace-nowrap">
               Beauty for Ashes
             </span>
           </Link>
+        </div>
 
-          {/* Navigation */}
+        {/* Navigation - Absolute Center */}
+        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <NavigationMenu>
             <NavigationMenuList className="gap-2">
               {navItems.map((item) => (
@@ -51,10 +52,14 @@ export function Header() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
+        </div>
 
-          {/* CTA */}
-          <Button className="bg-white text-black hover:bg-white/90 font-medium whitespace-nowrap">
-            Contact / Enquire
+        {/* CTA - Right */}
+        <div className="hidden md:flex items-center">
+          <Button asChild className="bg-white text-black hover:bg-white/90 font-medium whitespace-nowrap">
+            <Link href="https://cal.com/xyz-digilab-ki4pwo/15min" target="_blank" rel="noopener noreferrer">
+              Contact / Enquire
+            </Link>
           </Button>
         </div>
 
