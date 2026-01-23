@@ -7,8 +7,7 @@ export function About() {
             <div className="container max-w-6xl mx-auto px-4">
                 {/* Unified Card Container */}
                 <div className="bg-orange-50/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-stone-100">
-                    <div className="grid lg:grid-cols-[45%_55%] gap-0">
-
+                    <div className="grid lg:grid-cols-[50%_50%] gap-0">
                         {/* Image Side */}
                         <div className="relative h-[400px] lg:h-auto w-full">
                             <Image
@@ -24,7 +23,7 @@ export function About() {
                         <div className="w-full h-3 lg:hidden bg-brand-soft" />
 
                         {/* Content Side */}
-                        <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                        <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-center">
                             <blockquote className="text-xl md:text-2xl font-serif text-brand-primary/80 italic mb-8 leading-relaxed">
                                 "I believe healing begins when you feel safe enough to be real."
                             </blockquote>
@@ -46,7 +45,7 @@ export function About() {
                             </div>
 
                             <div className="mt-8 pt-6">
-                                <Button className="bg-brand-primary hover:bg-brand-secondary text-primary-foreground text-lg px-8 py-6 h-auto">
+                                <Button className="bg-brand-primary hover:bg-brand-secondary text-primary-foreground text-base px-6 py-3 h-auto">
                                     Book a free consultation
                                 </Button>
                             </div>
