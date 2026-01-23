@@ -79,19 +79,30 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-zinc-950 border-zinc-800">
-              <div className="flex flex-col space-y-4 mt-8">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-lg font-medium text-white/90 hover:text-white"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <Button className="bg-white text-black hover:bg-white/90 font-medium w-full mt-4">
-                  Contact / Enquire
-                </Button>
+              <div className="flex flex-col h-full pt-10">
+                <div className="px-6 mb-8">
+                  <span className="text-2xl font-bold tracking-tight text-white/90">
+                    Beauty for Ashes
+                  </span>
+                </div>
+                <div className="flex flex-col space-y-6 px-6">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-lg font-medium text-white/80 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  <div className="pt-4">
+                    <Button asChild className="bg-white text-black hover:bg-white/90 font-medium w-full">
+                      <Link href="https://cal.com/xyz-digilab-ki4pwo/15min" target="_blank" rel="noopener noreferrer">
+                        Contact / Enquire
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
