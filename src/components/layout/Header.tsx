@@ -26,25 +26,24 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container relative flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-8">
-        {/* Left: Logo */}
-        <div className="flex items-center z-20">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
+      <div className="container relative flex h-16 max-w-screen-xl items-center justify-center px-4 sm:px-8">
+        {/* Desktop Layout: Centered Group */}
+        <div className="hidden md:flex items-center gap-8">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold tracking-tight text-brand-primary whitespace-nowrap">
+            <span className="text-xl font-bold tracking-tight text-white whitespace-nowrap">
               Beauty for Ashes
             </span>
           </Link>
-        </div>
 
-        {/* Center: Desktop Navigation - Absolute Centered */}
-        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+          {/* Navigation */}
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="gap-2">
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.name}>
                   <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent text-white/90 hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white active:bg-white/10 active:text-white data-[active]:bg-white/10 data-[state=open]:bg-white/10`}>
                       {item.name}
                     </NavigationMenuLink>
                   </Link>
@@ -52,36 +51,40 @@ export function Header() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-        </div>
 
-        {/* Right: CTA - Pushed to the end */}
-        <div className="hidden md:flex items-center space-x-4 z-20">
-          <Button className="bg-brand-primary hover:bg-brand-secondary text-primary-foreground font-medium whitespace-nowrap">
+          {/* CTA */}
+          <Button className="bg-white text-black hover:bg-white/90 font-medium whitespace-nowrap">
             Contact / Enquire
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="flex md:hidden ml-auto z-20">
+        {/* Mobile Layout: Logo Left, Menu Right */}
+        <div className="flex w-full items-center justify-between md:hidden">
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-xl font-bold tracking-tight text-white whitespace-nowrap">
+              Beauty for Ashes
+            </span>
+          </Link>
+
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="md:hidden text-white hover:bg-white/10">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-zinc-950 border-zinc-800">
               <div className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium hover:text-brand-primary"
+                    className="text-lg font-medium text-white/90 hover:text-white"
                   >
                     {item.name}
                   </Link>
                 ))}
-                <Button className="bg-brand-primary hover:bg-brand-secondary text-primary-foreground font-medium w-full mt-4">
+                <Button className="bg-white text-black hover:bg-white/90 font-medium w-full mt-4">
                   Contact / Enquire
                 </Button>
               </div>
