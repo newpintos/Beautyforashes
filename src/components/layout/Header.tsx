@@ -29,7 +29,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80">
       <div className="container relative flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-8">
         {/* Logo - Left */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold tracking-tight text-white whitespace-nowrap">
               Beauty for Ashes
@@ -38,7 +38,7 @@ export function Header() {
         </div>
 
         {/* Navigation - Absolute Center */}
-        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <NavigationMenu>
             <NavigationMenuList className="gap-2">
               {navItems.map((item) => (
@@ -55,7 +55,7 @@ export function Header() {
         </div>
 
         {/* CTA - Right */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
           <Button asChild className="bg-white text-black hover:bg-white/90 font-medium whitespace-nowrap">
             <Link href="https://cal.com/xyz-digilab-ki4pwo/15min" target="_blank" rel="noopener noreferrer">
               Contact / Enquire
@@ -64,7 +64,7 @@ export function Header() {
         </div>
 
         {/* Mobile Layout: Logo Left, Menu Right */}
-        <div className="flex w-full items-center justify-between md:hidden">
+        <div className="flex w-full items-center justify-between lg:hidden">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold tracking-tight text-white whitespace-nowrap">
               Beauty for Ashes
@@ -73,7 +73,7 @@ export function Header() {
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-white hover:bg-white/10">
+              <Button variant="ghost" size="icon" className="lg:hidden text-white hover:bg-white/10">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
