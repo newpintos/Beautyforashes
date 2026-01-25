@@ -9,7 +9,7 @@ export function About() {
                 <div className="bg-orange-50/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-stone-100">
                     <div className="grid lg:grid-cols-[50%_50%] gap-0">
                         {/* Image Side */}
-                        <div className="relative h-[400px] lg:h-auto w-full">
+                        <div className="relative h-[300px] lg:h-auto w-full">
                             <Image
                                 src="/juli.png"
                                 alt="Julie Crawford - Psychotherapist"
