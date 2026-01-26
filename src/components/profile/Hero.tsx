@@ -1,7 +1,7 @@
 
 export function Hero() {
     return (
-        <section className="relative w-full overflow-hidden">
+        <section className="relative w-full lg:w-1/2 lg:mx-auto overflow-hidden">
             {/* Background Banner */}
             <video
                 className="w-full h-auto"
