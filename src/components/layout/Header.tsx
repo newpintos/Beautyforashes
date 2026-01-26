@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,6 +18,8 @@ import {
 } from "@/components/ui/sheet";
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navItems = [
     { name: "About", href: "#about" },
     { name: "Approach", href: "#approach" },
@@ -71,7 +74,7 @@ export function Header() {
             </span>
           </Link>
 
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="lg:hidden text-white hover:bg-white/10">
                 <Menu className="h-5 w-5" />
@@ -91,13 +94,19 @@ export function Header() {
                       key={item.name}
                       href={item.href}
                       className="text-lg font-medium text-white/80 hover:text-white transition-colors"
+                      onClick={() => setIsOpen(false)}
                     >
                       {item.name}
                     </Link>
                   ))}
                   <div className="pt-4">
                     <Button asChild className="bg-white text-black hover:bg-white/90 font-medium w-full">
-                      <Link href="https://cal.com/xyz-digilab-ki4pwo/15min" target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href="https://cal.com/xyz-digilab-ki4pwo/15min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                      >
                         Contact / Enquire
                       </Link>
                     </Button>
