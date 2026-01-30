@@ -45,9 +45,11 @@ export function About() {
                             </div>
 
                             <div className="mt-8 pt-6">
-                                <Button className="bg-brand-primary hover:bg-brand-secondary text-primary-foreground text-base px-6 py-3 h-auto">
-                                    Book a free consultation
-                                </Button>
+                                <a href="https://cal.com/xyz-digilab-ki4pwo/15min" target="_blank" rel="noopener noreferrer">
+                                    <Button className="bg-brand-primary hover:bg-brand-secondary text-primary-foreground text-base px-6 py-3 h-auto">
+                                        Book a free consultation
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>
