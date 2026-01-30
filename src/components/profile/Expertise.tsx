@@ -33,9 +33,9 @@ export function Expertise() {
                 </p>
             </div>
 
-            <div className="flex flex-col gap-8 pause-on-hover">
+            <div className="flex flex-col gap-8 pause-on-hover max-w-6xl mx-auto">
                 {/* First Row - Scrolling Left */}
-                <div className="relative flex w-full overflow-hidden mask-linear-gradient">
+                <div className="relative flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
                     <div className="flex animate-marquee min-w-full shrink-0 items-center justify-around py-2">
                         {firstRow.map((area, index) => (
                             <MarqueeCard key={`row1-1-${index}`} text={area} />
@@ -47,7 +47,7 @@ export function Expertise() {
                 </div>
 
                 {/* Second Row - Scrolling Right */}
-                <div className="relative flex w-full overflow-hidden mask-linear-gradient">
+                <div className="relative flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
                     <div className="flex animate-marquee-reverse min-w-full shrink-0 items-center justify-around py-2">
                         {secondRow.map((area, index) => (
                             <MarqueeCard key={`row2-1-${index}`} text={area} />
