@@ -1,7 +1,5 @@
 
-import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+
 
 export function Expertise() {
     const commonAreas = [
@@ -17,47 +15,54 @@ export function Expertise() {
         "Stress", "Trauma", "Women's issues", "Work related issues"
     ];
 
+    const firstRow = commonAreas.slice(0, Math.ceil(commonAreas.length / 2));
+    const secondRow = commonAreas.slice(Math.ceil(commonAreas.length / 2));
+
+    const MarqueeCard = ({ text }: { text: string }) => (
+        <div className="mx-2 flex items-center justify-center rounded-2xl border border-brand-soft/50 bg-white px-6 py-4 shadow-sm transition-transform hover:scale-105 hover:border-brand-primary/50">
+            <span className="whitespace-nowrap text-sm font-medium text-foreground">{text}</span>
+        </div>
+    );
+
     return (
-        <section id="expertise" className="py-16 bg-gradient-to-t from-white to-brand-soft/20 animate-in fade-in duration-700">
-            <div className="container max-w-5xl mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold text-brand-primary mb-3">Areas of Counselling</h2>
-                <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
+        <section id="expertise" className="py-20 bg-gradient-to-t from-white to-brand-soft/20 overflow-hidden">
+            <div className="container mx-auto px-4 text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">Areas of Counselling</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                     I am experienced in helping clients navigate a wide spectrum of challenges.
                 </p>
+            </div>
 
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-brand-soft/50">
-                    <ScrollArea className="h-[300px] w-full pr-4">
-                        <div className="flex flex-wrap justify-center gap-2">
-                            {commonAreas.map((area) => (
-                                <HoverCard key={area}>
-                                    <HoverCardTrigger asChild>
-                                        <Badge
-                                            variant="outline"
-                                            className="text-sm px-3 py-1.5 cursor-pointer hover:bg-brand-secondary hover:text-white transition-all hover:border-transparent rounded-full font-normal text-muted-foreground"
-                                        >
-                                            {area}
-                                        </Badge>
-                                    </HoverCardTrigger>
-                                    <HoverCardContent className="w-80">
-                                        <div className="space-y-1">
-                                            <h4 className="text-sm font-semibold">{area}</h4>
-                                            <p className="text-xs text-muted-foreground">
-                                                {/* Placeholder description logic */}
-                                                Support and therapeutic guidance for dealing with {area.toLowerCase()}.
-                                                We can work together to understand how this impacts your life.
-                                            </p>
-                                        </div>
-                                    </HoverCardContent>
-                                </HoverCard>
-                            ))}
-                        </div>
-                    </ScrollArea>
-                    <div className="mt-4 pt-4 border-t border-brand-soft/30">
-                        <p className="text-xs text-muted-foreground">
-                            * Scroll to view more. This list is not exhaustive.
-                        </p>
+            <div className="flex flex-col gap-8 pause-on-hover">
+                {/* First Row - Scrolling Left */}
+                <div className="relative flex w-full overflow-hidden mask-linear-gradient">
+                    <div className="flex animate-marquee min-w-full shrink-0 items-center justify-around py-2">
+                        {firstRow.map((area, index) => (
+                            <MarqueeCard key={`row1-1-${index}`} text={area} />
+                        ))}
+                        {firstRow.map((area, index) => (
+                            <MarqueeCard key={`row1-2-${index}`} text={area} />
+                        ))}
                     </div>
                 </div>
+
+                {/* Second Row - Scrolling Right */}
+                <div className="relative flex w-full overflow-hidden mask-linear-gradient">
+                    <div className="flex animate-marquee-reverse min-w-full shrink-0 items-center justify-around py-2">
+                        {secondRow.map((area, index) => (
+                            <MarqueeCard key={`row2-1-${index}`} text={area} />
+                        ))}
+                        {secondRow.map((area, index) => (
+                            <MarqueeCard key={`row2-2-${index}`} text={area} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="mt-10 text-center">
+                <p className="text-xs text-muted-foreground uppercase tracking-wider">
+                    * Scroll to view more. This list is not exhaustive.
+                </p>
             </div>
         </section>
     );
